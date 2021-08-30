@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://api.themoviedb.org",
+  "homepage": "http://Koras02.github.io/React-Node-Express",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -20,7 +21,9 @@
   "scripts": {
     "server": "cd server && nodemon server",
     "client": "cd client && yarn start",
-    "start": "concurrently --kill-ohters-on-fail \"yarn server\" \"yarn client\""
+    "start": "concurrently --kill-ohters-on-fail \"yarn server\" \"yarn client\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
